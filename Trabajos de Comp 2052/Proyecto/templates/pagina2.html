@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Página 2{% endblock %}
+
+{% block content %}
+<h2>Tabla de datos</h2>
+<table border="1">
+    <tr><th>Nombre</th><th>Edad</th></tr>
+    {% for persona in personas %}
+        <tr>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.edad }}</td>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock %}
